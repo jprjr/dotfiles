@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-files="vimrc zshrc tmux.conf conkyrc offlineimaprc offlineimap_funcs.py mutt muttrc perlcriticrc"
+files="vimrc zshrc tmux.conf conkyrc perlcriticrc"
 scripts="tmux_mail_count.sh conky_mail_count.sh conky_album_art.sh"
 
 set -e
