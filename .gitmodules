@@ -1,0 +1,3 @@
+[submodule "private"]
+	path = private
+	url = ssh://git@git.jrjrtech.com:10022/jregan/dotfiles-private.git
