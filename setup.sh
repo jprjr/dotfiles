@@ -60,6 +60,17 @@ else
     cd syntastic; git pull; cd ..
 fi
 
+# luaenv and luarocks
+cd $HOME
+if [[ -d "$HOME/.luaenv" ]] ; then
+    git clone https://github.com/cehoffman/luaenv.git "$HOME/.luaenv"
+    git clone https://github.com/cehoffman/lua-build.git "$HOME/.luaenv/plugins/lua-build"
+else
+    cd "$HOME/.luaenv"; git pull
+    cd "$HOME/.luaenv/plugins/lua-build"; git pull
+fi
+
+
 # Perlbrew
 cd $HOME
 if [[ ! -d "$HOME/.plenv" ]] ; then
