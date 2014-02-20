@@ -23,6 +23,9 @@ autoload promptinit
 promptinit
 prompt adam1
 
+#luaenv path
+PATH="$HOME/.luaenv/shims:$HOME/.luaenv/bin:$PATH"
+
 #plenv path
 PATH="$HOME/.plenv/shims:$HOME/.plenv/bin:$PATH"
 

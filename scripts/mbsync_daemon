@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+while :; do
+    echo $(date)" Performing sync"
+    mbsync -a -q
+    sleep 60
+done
