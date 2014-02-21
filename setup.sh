@@ -71,7 +71,7 @@ else
 fi
 
 
-# Perlbrew
+# Plenv
 cd $HOME
 if [[ ! -d "$HOME/.plenv" ]] ; then
     git clone https://github.com/tokuhirom/plenv.git "$HOME/.plenv"
@@ -81,6 +81,13 @@ else
     cd "$HOME/.plenv/plugins/perl-build"; git pull
 fi
 
+# pyenv
+cd $HOME
+if [[ ! -d "$HOME/.rbenv" ]] ; then
+    git clone https://github.com/yyuu/pyenv.git "$HOME/.pyenv"
+else
+    cd "$HOME/.pyenv"; git pull
+fi
 
 # rbenv
 cd $HOME

@@ -29,6 +29,9 @@ PATH="$HOME/.luaenv/shims:$HOME/.luaenv/bin:$PATH"
 #plenv path
 PATH="$HOME/.plenv/shims:$HOME/.plenv/bin:$PATH"
 
+#pyenv path
+PATH="$HOME/.pyenv/shims:$HOME/.pyenv/bin:$PATH"
+
 #rbenv path
 PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
 
