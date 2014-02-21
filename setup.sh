@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-files="vimrc zshrc tmux.conf conkyrc perlcriticrc Xdefaults wallpapers"
+files="vimrc zshrc tmux.conf conkyrc perlcriticrc wallpapers"
 scripts="tmux_mail_count.sh conky_mail_count.sh conky_album_art.sh"
 
 set -e
