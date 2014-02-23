@@ -21,5 +21,5 @@ script_abs_name=$(readlink "${abs_path}" || echo "${script_name}")
 while :; do
     echo $(date)" Performing sync"
     mbsync -a -q
-    sleep 60
+    sleep 300
 done
