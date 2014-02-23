@@ -17,6 +17,8 @@ set expandtab
 " Keep tabs for Makefiles
 autocmd BufEnter ?akefile* set noet
 
+set foldmethod=marker
+
 " utf8
 set fencs=utf-8,default,latin1
 
