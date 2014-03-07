@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-files="vimrc zshrc tmux.conf conkyrc perlcriticrc"
+files="vimrc zshrc tmux.conf conkyrc perlcriticrc wallpapers"
 scripts="tmux_mail_count.sh conky_mail_count.sh conky_album_art.sh"
 
 set -e
@@ -60,7 +60,18 @@ else
     cd syntastic; git pull; cd ..
 fi
 
-# Perlbrew
+# luaenv and luarocks
+cd $HOME
+if [[ -d "$HOME/.luaenv" ]] ; then
+    git clone https://github.com/cehoffman/luaenv.git "$HOME/.luaenv"
+    git clone https://github.com/cehoffman/lua-build.git "$HOME/.luaenv/plugins/lua-build"
+else
+    cd "$HOME/.luaenv"; git pull
+    cd "$HOME/.luaenv/plugins/lua-build"; git pull
+fi
+
+
+# Plenv
 cd $HOME
 if [[ ! -d "$HOME/.plenv" ]] ; then
     git clone https://github.com/tokuhirom/plenv.git "$HOME/.plenv"
@@ -70,6 +81,13 @@ else
     cd "$HOME/.plenv/plugins/perl-build"; git pull
 fi
 
+# pyenv
+cd $HOME
+if [[ ! -d "$HOME/.rbenv" ]] ; then
+    git clone https://github.com/yyuu/pyenv.git "$HOME/.pyenv"
+else
+    cd "$HOME/.pyenv"; git pull
+fi
 
 # rbenv
 cd $HOME
