@@ -20,7 +20,7 @@ fi
 cd "$mydir"
 
 for file in $files; do
-    if [[ ! -L "$HOME/.$file" ]] ; then
+    if [[ -f "$HOME/.$file" && ! -L "$HOME/.$file" ]] ; then
         mv "$HOME"/."$file" "$olddir"
     fi
     ln -f -s "$mydir"/"$file" "$HOME"/."$file"
