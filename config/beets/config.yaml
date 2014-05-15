@@ -1,5 +1,5 @@
-library: /home/john/.config/beets/library.db
-directory: /home/john/Music
+library: ~/.config/beets/library.db
+directory: ~/Music
 plugins: lastgenre ftintitle fetchart embedart smartplaylist replaygain discogs info duplicates rewrite echonest missing
 art_filename: folder
 original_date: yes
@@ -23,7 +23,7 @@ paths:
     default: %asciify{%if{$albumartist_sort,$albumartist_sort,$albumartist}}/%asciify{$album}%if{$albumdisambig, ($albumdisambig)}%aunique{albumartist album albumdisambig,year} (%if{$original_year,$original_year,$year})/$track %asciify{$title}
 
 echonest:
-    codegen: /home/john/Programs/echoprint-codegen-4.12/echoprint-codegen
+    codegen: ~/Programs/echoprint-codegen-4.12/echoprint-codegen
 
 smartplaylist:
     relative_to: ~/Music
