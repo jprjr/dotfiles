@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-files="vimrc zshrc tmux.conf conkyrc perlcriticrc wallpapers Xresources"
+files="vimrc zshrc tmux.conf conkyrc perlcriticrc wallpapers Xresources ncmpcpp"
 scripts=""
 
 set -e
