@@ -64,6 +64,12 @@ else
     cd syntastic; git pull; cd ..
 fi
 
+if [[ ! -d vim-airline ]] ; then
+    git clone https://github.com/bling/vim-airline.git
+else
+    cd vim-airline; git pull; cd ..
+fi
+
 # luaenv and luarocks
 cd $HOME
 if [[ ! -d "$HOME/.luaenv" ]] ; then

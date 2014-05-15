@@ -1,4 +1,6 @@
 set nocompatible
+set lazyredraw
+set background=dark
 
 " Syntax highlighting, numbering
 set number
@@ -37,5 +39,14 @@ colors zenburn
 " syntastic
 let g:syntastic_check_on_open = 0
 let g:syntastic_enable_signs = 1
+let g:syntastic_enable_perl_checker = 1
 let g:syntastic_perl_checkers = ['perl', 'perlcritic']
 nmap <F9> :SyntasticCheck<CR>
+
+" airline
+let g:airline_theme = 'zenburn'
+let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
+
+highlight ExtraWhitespace ctermbg=darkblue guibg=darkblue
+match ExtraWhitespace /\s\+$/
