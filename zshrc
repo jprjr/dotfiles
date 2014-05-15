@@ -2,7 +2,7 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 export PATH="$HOME/bin:$PATH"
-export EDTIOR="vim"
+export EDITOR="vim"
 setopt nolist_beep
 setopt nohist_beep
 bindkey -v
