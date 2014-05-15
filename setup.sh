@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-files="vimrc zshrc tmux.conf conkyrc perlcriticrc wallpapers"
-scripts="tmux_mail_count.sh conky_mail_count.sh conky_album_art.sh"
+files="vimrc zshrc tmux.conf conkyrc perlcriticrc wallpapers Xresources"
+scripts=""
 
 set -e
 
@@ -62,7 +62,7 @@ fi
 
 # luaenv and luarocks
 cd $HOME
-if [[ -d "$HOME/.luaenv" ]] ; then
+if [[ ! -d "$HOME/.luaenv" ]] ; then
     git clone https://github.com/cehoffman/luaenv.git "$HOME/.luaenv"
     git clone https://github.com/cehoffman/lua-build.git "$HOME/.luaenv/plugins/lua-build"
 else
