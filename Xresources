@@ -1,12 +1,3 @@
-!{{{ XFT
-! xft*dpi: 96
-xft*antialias: true
-xft*rgba: rgb
-xft*hinting: true
-xft*hintstyle: hintslight
-xft*lcdfilter: lcddefault
-!}}}
-
 !{{{ URXVT
 !
 ! General
