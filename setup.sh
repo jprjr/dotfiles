@@ -39,7 +39,7 @@ done
 
 # stuff in ~/.config:
 # note: -printf doesn't work on BSD find (ugh)
-find "$mydir"/config -type f -exec bash -c 'destfile="$HOME/.config${0#$mydir/config}"; destdir=$(dirname "${destfile}"); mkdir -p "${destdir}"; ln -sf "${0}" "${destfile}"' {} \;
+find "$mydir"/config -type f -exec bash -c 'destfile="$HOME/.config${0#'"$mydir/config"'}"; destdir=$(dirname "${destfile}"); mkdir -vp "${destdir}"; ln -sfv "${0}" "${destfile}" ' {} \;
 
 # Supporting stuff for vim
 mkdir -p "$HOME/.vim/"{autoload,bundle,colors}
