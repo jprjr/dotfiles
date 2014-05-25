@@ -42,15 +42,32 @@ done
 find "$mydir"/config -type f -exec bash -c 'destfile="$HOME/.config${0#'"$mydir/config"'}"; destdir=$(dirname "${destfile}"); mkdir -vp "${destdir}"; ln -sfv "${0}" "${destfile}" ' {} \;
 
 # Supporting stuff for vim
-mkdir -p "$HOME/.vim/"{autoload,bundle,colors}
+mkdir -p "$HOME/.vim/"{autoload,bundle,colors,colors-git}
 
-curl -Sso ~/.vim/autoload/pathogen.vim \
-     https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
-curl -Sso ~/.vim/colors/zenburn \
-     https://raw.github.com/jnurmine/Zenburn/master/colors/zenburn.vim
+
+cd "$HOME"/.vim/colors-git
+
+if [[ ! -d Zenburn ]] ; then
+    git clone https://github.com/jnurmine/Zenburn
+else
+    cd Zenburn; git pull; cd ..
+fi
+
+ln -sf "$HOME/.vim/colors-git/Zenburn/colors/zenburn.vim" \
+  "$HOME/.vim/colors/zenburn.vim"
+
 
 cd "$HOME/.vim/bundle"
+
+if [[ ! -d vim-pathogen ]] ; then
+    git clone https://github.com/tpope/vim-pathogen.git
+else
+    cd vim-pathogen; git pull; cd ..
+fi
+
+ln -sf "$HOME/.vim/bundle/vim-pathogen/autoload/pathogen.vim" \
+  "$HOME/.vim/autoload/pathogen.vim"
 
 if [[ ! -d tagbar ]] ; then
     git clone https://github.com/majutsushi/tagbar.git
