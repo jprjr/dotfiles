@@ -1,3 +1,4 @@
+
 !{{{ URXVT
 !
 ! General
@@ -24,9 +25,9 @@ urxvt*cutchars:        '"'()*<>[]{|}
 ! Appearance
 !urxvt*font:     -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso8859-2
 !urxvt*boldFont: -xos4-terminus-bold-*-*-*-12-*-*-*-*-*-iso8859-2
-urxvt*font: xft:Consolas:size=10,xft:Sampige:size=10
-urxvt*boldFont: xft:Consolas:bold:size=10,xft:Sampige:bold:size=10
-urxvt*xftAutoHint: true
+urxvt*font: xft:Droid Sans Mono:size=10
+!urxvt*boldFont: xft:Droid Sans Mono:style=Bold:size=10:autohint=true
+! urxvt*xftAutoHint: true
 !urxvt*font: xft:monaco:size=10
 !urxvt*boldFont: xft:monaco:bold:size=10
 !urxvt*xftAutoHint: true
