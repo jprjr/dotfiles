@@ -1,6 +1,5 @@
 set nocompatible
 set lazyredraw
-set background=dark
 
 " Syntax highlighting, numbering
 set number
@@ -33,8 +32,9 @@ execute pathogen#infect()
 " tagbar
 nmap <F8> :TagbarToggle<CR>
 
-" zenburn
-colors zenburn
+" colors
+colors solarized
+set background=light
 
 " syntastic
 let g:syntastic_check_on_open = 0

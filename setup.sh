@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-files="vimrc zshrc tmux.conf conkyrc perlcriticrc wallpapers Xresources ncmpcpp"
+files="vimrc zshrc tmux.conf conkyrc perlcriticrc wallpapers Xresources Xresources.d ncmpcpp"
 scripts=""
 
 set -e
@@ -85,6 +85,12 @@ if [[ ! -d vim-airline ]] ; then
     git clone https://github.com/bling/vim-airline.git
 else
     cd vim-airline; git pull; cd ..
+fi
+
+if [[ ! -d vim-colors-solarized ]] ; then
+    git clone https://github.com/altercation/vim-colors-solarized.git
+else
+    cd vim-colors-solarized; git pull; cd ..
 fi
 
 # luaenv and luarocks

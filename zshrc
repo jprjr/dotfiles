@@ -18,10 +18,8 @@ zstyle :compinstall filename '/home/john/.zshrc'
 autoload -Uz compinit
 compinit
 
-# adam1 prompt
-autoload promptinit
-promptinit
-prompt adam1
+
+PROMPT="%n@%m%k %B%F{cyan}%(4~|...|)%3~ %# %b"
 
 #luaenv path
 PATH="$HOME/.luaenv/shims:$HOME/.luaenv/bin:$PATH"
@@ -45,3 +43,4 @@ if [[ -f "$HOME/.zshrc.local" ]]; then
     source "$HOME/.zshrc.local"
 fi
 
+eval $(dircolors ~/.dircolors)
