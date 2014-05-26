@@ -1,45 +1,37 @@
-
-use_xft yes
-xftfont Helvetica LT Std Roman:size=10
-
-# xftalpha 0.1
-update_interval 3
-total_run_times 0
-background no
-own_window yes
-own_window_class conky
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-own_window_transparent yes
+background yes
+update_interval 1
 double_buffer yes
+no_buffers yes
+alignment top_right
+
+gap_x 40
+gap_y 40
+
+minimum_size 350 350
+maximum_width 350
+
+own_window yes
+own_window_type desktop
+own_window_transparent no
+own_window_argb_visual yes
+own_window_argb_value o
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+border_inner_margin 0
+border_outer_margin 0
+
 draw_shades no
 draw_outline no
 draw_borders no
 draw_graph_borders no
-default_color e0e0e0
-default_shade_color black
-default_outline_color green
-alignment top_right
-gap_x 20
-gap_y 20
-no_buffers yes
-maximum_width 240
-uppercase no
-cpu_avg_samples 2
-net_avg_samples 1
-override_utf8_locale yes
-use_spacer right
 
+use_xft yes
+xftfont Roboto Thin:size=32
+xft_alpha 1
+uppercase no
+
+default_color ffffff
 
 TEXT
-${font Helvetica LT Std Roman:size=72}${alignr}${color #dddddd}${time %H:%M}${font}
+${font Roboto Thin :size=98}${time %I:%M}${font}
 
-${alignr} Disk used /home: ${fs_used_perc /home}%
-${alignr} Disk used /: ${fs_used_perc /}%
-${alignr} Memory used: ${memperc}%
-${alignr} ${exec /home/john/bin/conky_mail_count.sh} unread mail
-
-${if_mpd_playing}${font Helvetica LT Std Roman:size=14}${alignr}${mpd_artist}
-${alignr}${mpd_title}
-
-${exec /home/john/bin/conky_album_art.sh}${image /home/john/.mpd/albumart -p 40,230 -s 200x200 -n}${endif}
-
+${font Roboto Thin :size=32}${time %A %b %d}${font}
