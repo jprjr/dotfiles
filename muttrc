@@ -6,6 +6,7 @@ set reverse_name
 set timeout=5
 
 #Various options
+set pager_index_lines=12
 set allow_8bit
 set include=yes 
 set nomark_old
