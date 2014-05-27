@@ -1,0 +1,36 @@
+# general purpose settings
+set mbox_type = Maildir
+set beep_new = yes
+set folder = ~/.mail
+set reverse_name
+set timeout=5
+
+#Various options
+set allow_8bit
+set include=yes 
+set nomark_old
+set copy=no
+set strict_threads=yes
+set smart_wrap=yes
+set wrap=80
+unset markers
+set editor="vim -c 'set fo=cq' -c 'set tw=70' -c 'set spell spelllang=en_us' -c 'set filetype=mail' +:$ -c'$?^$' +:star!"
+set pager_format="%[%a, %d %b %Y %I:%M%P]%* (%P)"
+set status_format="-%r-Mutt: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]--%>-(%P)"
+
+# Default sorting stuff
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+
+# attachment handling
+mime_lookup application/octet-stream
+set mailcap_path = ~/.mutt/mailcap
+auto_view text/html
+
+alternative_order = text/plain text/html
+
+
+#Now sourced
+source ~/.mutt/pgp
+source ~/.mutt/colors
+source ~/.mutt/private/accounts

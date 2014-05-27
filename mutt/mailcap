@@ -1,0 +1,19 @@
+text/html; firefox %s; test=test -n "$DISPLAY"; nametemplate=%s.html
+text/html; w3m %s; nametemplate=%s.html; print=printHTML.pl %s
+text/html; elinks -dump-width 72 -dump 1 %s; nametemplate=%s.html; copiousoutput
+
+application/msword; mutt_bgrun ooffice %s; test=test -n "$DISPLAY"
+application/msword; antiword %s; copiousoutput 
+
+application/excel; mutt_bgrun ooffice %s; test=test -n "$DISPLAY"
+application/excel; excel2text %s; copiousoutput
+
+application/msexcel; mutt_bgrun ooffice %s; test=test -n "$DISPLAY"
+application/msexcel; excel2text %s; copiousoutput
+application/vnd.ms-excel; mutt_bgrun ooffice %s; test=test -n "$DISPLAY"
+application/vnd.ms-excel; excel2text %s; copiousoutput
+
+application/pdf; xdg-open %s; test=test -n "$DISPLAY"
+application/pdf; pdftotext %s -; copiousoutput
+
+image/jpeg; gpicview %s; test=test -n "$DISPLAY"
