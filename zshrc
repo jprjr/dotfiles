@@ -43,4 +43,6 @@ if [[ -f "$HOME/.zshrc.local" ]]; then
     source "$HOME/.zshrc.local"
 fi
 
-eval $(dircolors ~/.dircolors)
+if which dircolors > /dev/null; then
+    eval $(dircolors ~/.dircolors)
+fi
