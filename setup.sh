@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 files="vimrc zshrc tmux.conf conkyrc mutt muttrc perlcriticrc wallpapers Xresources Xresources.d ncmpcpp"
-scripts=""
+scripts="tmux_mail_count.sh"
 
 set -e
 
@@ -12,10 +12,10 @@ realpath_portable() {
 mydir=$(dirname $(realpath_portable "$0"))
 olddir=$mydir/dotfiles.old
 
-if [[ -f "$olddir" ]] ; then
-    echo "Making $olddir for backups"
-    mkdir -p "$olddir"
-fi
+#if [[ -f "$olddir" ]] ; then
+#    echo "Making $olddir for backups"
+#    mkdir -p "$olddir"
+#fi
 
 cd "$mydir"
 
@@ -31,7 +31,7 @@ if [[ ! -d "$HOME/bin" ]]; then
 fi
 
 for script in $scripts; do
-    if [[ ! -L "$HOME/bin/$script" ]]; then
+    if [[ -f "$HOME/bin/$script" && ! -L "$HOME/bin/$script" ]]; then
         mv "$HOME/bin/$script" "$olddir"
     fi
     ln -f -s "$mydir/scripts/$script" "$HOME/bin/$script"
