@@ -1,3 +1,6 @@
 [submodule "private"]
 	path = private
-	url = ./mutt/private
+	url = /media/AWESOME-O/stuff/dotfiles-private
+[submodule "mutt/private"]
+	path = mutt/private
+	url = /media/AWESOME-O/stuff/mutt-private
