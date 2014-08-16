@@ -21,7 +21,6 @@ autocmd BufEnter ?akefile* set noet
 set foldmethod=marker
 
 " utf8
-set fencs=utf-8,default,latin1
 
 " run a local .vimrc
 set exrc
