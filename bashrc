@@ -11,5 +11,7 @@ export PROMPT_COMMAND='echo -ne "\033kbash\033\\"'
 
 # User specific aliases and functions
 eval $(dircolors ~/.dircolors)
-alias ls='ls --classify --tabsize=0 --literal --color=auto --show-control-chars --human-readable --group-directories-first'
-alias grep='grep -i -H -n -T --color=auto'
+
+if [[ -f "$HOME/.aliases" ]]; then
+  source "$HOME/.aliases"
+fi
