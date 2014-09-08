@@ -21,7 +21,8 @@ autocmd BufEnter ?akefile* set noet
 set foldmethod=marker
 
 " utf8
-set fencs=utf-8,default,latin1
+
+filetype plugin on
 
 " run a local .vimrc
 set exrc
@@ -44,7 +45,7 @@ let g:syntastic_perl_checkers = ['perl', 'perlcritic']
 nmap <F9> :SyntasticCheck<CR>
 
 " airline
-let g:airline_theme = 'zenburn'
+let g:airline_theme = 'solarized'
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
