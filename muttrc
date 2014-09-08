@@ -34,7 +34,6 @@ auto_view text/html
 
 alternative_order = text/plain text/html
 
-
 #Now sourced
 source ~/.mutt/pgp
 source ~/.mutt/colors
