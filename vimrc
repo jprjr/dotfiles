@@ -20,8 +20,6 @@ autocmd BufEnter ?akefile* set noet
 
 set foldmethod=marker
 
-" utf8
-
 filetype plugin on
 
 " run a local .vimrc
@@ -35,7 +33,7 @@ nmap <F8> :TagbarToggle<CR>
 
 " colors
 colors solarized
-set background=light
+set background=dark
 
 " syntastic
 let g:syntastic_check_on_open = 0
