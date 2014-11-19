@@ -1,0 +1,3 @@
+alias ls='ls -F -G'
+alias grep='grep -i -H -n --color=auto'
+
